@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sketchbook</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(135deg, #ffebf0, #f0f9ff);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .title {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #ff66b3;
+            text-shadow: 2px 2px 6px rgba(255, 102, 179, 0.3);
+            text-align: center;
+            border-bottom: 3px dotted #ffb3d9;
+            padding-bottom: 10px;
+        }
+        .roadmap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            width: 90%;
+            max-width: 900px;
+            gap: 10px;
+        }
+        .path {
+            position: absolute;
+            width: 6px;
+            background: #ff66b3;
+            height: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+            border-radius: 4px;
+        }
+        .road {
+            position: absolute;
+            width: 6px;
+            height: 100%;
+            background: linear-gradient(black 50%, transparent 50%);
+            background-size: 12px 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+            border-radius: 4px;
+        }
+        .milestone {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            width: 100%;
+        }
+        .milestone .photo {
+            position: relative;
+            width: 220px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(255, 102, 179, 0.3);
+            border: 4px solid #ffb3d9;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .milestone .photo img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        .milestone:hover .photo {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(255, 102, 179, 0.5);
+        }
+        .caption {
+            margin-top: 5px;
+            font-size: 1.2rem;
+            color: #555;
+            font-weight: bold;
+            background-color: #ffe6f0;
+            padding: 5px 15px;
+            border-radius: 20px;
+            box-shadow: 0 3px 6px rgba(255, 179, 217, 0.2);
+        }
+        .milestone:nth-child(odd) {
+            align-items: flex-start;
+        }
+        .milestone:nth-child(even) {
+            align-items: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">My Roadmap</h1>
+    <div class="roadmap">
+        <div class="road"></div>
+        <div class="milestone">
+            <div class="photo">
+                <img src="1.jpg" alt="Memory 1">
+            </div>
+            <div class="caption">Memory 1</div>
+        </div>
+        <div class="milestone">
+            <div class="photo">
+                <img src="2.jpg" alt="Memory 2">
+            </div>
+            <div class="caption">Memory 2</div>
+        </div>
+        <div class="milestone">
+            <div class="photo">
+                <img src="3.jpg" alt="Memory 3">
+            </div>
+            <div class="caption">Memory 3</div>
+        </div>
+       <div class="milestone">
+       <div class="photo">
+                <img src="4.jpg" alt="Memory 4">
+            </div>
+            <div class="caption">Memory 4</div>
+        </div>
+      <div class="milestone">
+      <div class="photo">
+                <img src="5.jpg" alt="Memory 5">
+            </div>
+            <div class="caption">Memory 5</div>
+        </div>
+        <!-- Add more milestones as needed -->
+    </div>
+</body>
+</html>
